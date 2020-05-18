@@ -1,0 +1,221 @@
+/*
+
+
+    font-family: "Mate", serif;
+
+    font-family: "Roboto", sans-serif;
+
+    font-family: "Roboto Condensed", sans-serif;
+
+*/
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Mate", serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+}
+
+.container-fluid {
+    margin: 0;
+}
+
+.h2_left {
+    background-color: #DCDCDC;
+    color: #B22222;
+    padding: 0.2em;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+#left {
+    background-color: #263238;
+    color: #DCDCDC;
+    padding: 2.5em;
+    position: -webkit-sticky;
+    position: sticky;
+    margin: 0;
+    top: 0;
+}
+
+#left p {
+    font-size: 0.9em;
+}
+
+#donut {
+    border: 4px #DCDCDC solid;
+    border-radius: 50% 50% 50% 50%;
+    margin: auto;
+    margin-bottom: 3em;
+    height: 9em;
+    width: 9em;
+    overflow: hidden;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#contact {
+    padding: 4em;
+    /* grid-column: 2 / -1; */
+    /* grid-row: 5 / 6; */
+}
+
+#top {
+    padding: 3em 3em;
+    /* grid-column: 2 / -1; */
+    /*grid-row: 1 / 2;*/
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    /*height: 15em;*/
+    top: 0;
+    margin: 0;
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2.5em;
+    color: #B22222;
+    text-transform: uppercase;
+}
+
+#title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 1.05em;
+}
+
+
+hr {
+    color: #B22222;
+    border-top: 4px;
+    margin-bottom: 1.5em;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 0.9em;
+    margin-top: 1em;
+}
+
+li {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9em;
+    font-weight: 300;
+    margin-top: 0.5em;
+}
+
+#exp {
+    padding: 3em;
+    /* grid-column: 2 / -1; */
+    /* grid-row: 2 / 3; */
+}
+
+.period {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #263238;
+    margin-top: 4em;
+}
+
+.job_title {
+    font: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #B22222;
+}
+
+.employer {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #263238;
+    margin-top: 1em;
+}
+
+.location {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #263238;
+    margin-top: 0em;
+}
+
+.company_description {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #263238;
+    margin-top: 0.5em;
+}
+
+#education {
+    padding: 3em;
+    /* grid-column: 2 / -1; */
+    /* grid-row: 3 / 4; */
+}
+
+#testimonials {
+    padding: 3em;
+    background-color: #263238;
+    color: #DCDCDC;
+    margin: auto;
+}
+
+.testimonial {
+    font-family: "Mate", serif;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.signature {
+display: inline-block;
+vertical-align: middle;
+margin-bottom: 4em;
+}
+
+.small_donut {
+    border: 4px #DCDCDC solid;
+    border-radius: 50% 50% 50% 50%;
+    margin-top: 2em;
+    margin-right: 3em;
+    height: 5em;
+    width: 5em;
+    overflow: hidden;
+    float: left;
+}
+
+.name_job {
+    float: left;
+}
+
+.name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.ref_job {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+
+
