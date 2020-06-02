@@ -306,6 +306,7 @@ li {
     font-weight: 400;
 }
 
+
 @media screen and (min-width: 980px) {
 
 
@@ -382,6 +383,7 @@ li {
         margin-bottom: 2.5em;
     }
 
+
     .course {
         display: grid;
         grid-template-columns: 2fr 6fr;
@@ -393,6 +395,7 @@ li {
     }
 
     .testimonials {
+
         grid-area: testimonials;
         padding: 2.5em;
         padding-bottom: 0;
@@ -401,5 +404,5 @@ li {
         grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
         gap: 1em;
         margin-bottom: 0;
-    }
+
 }
