@@ -1,87 +1,114 @@
 body {
-    margin:0;
+    margin: 0;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 4fr 8fr;
-    gap: 10px;
-    grid-template-areas: 
-        'left top'
-        'left exp'
-        'left education'
-        'left testimonials';
-}
-.mobileContent {
-    display: none;
-}
-.invis {
-color: #DCDCDC;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'left'
+        'exp'
+        'education'
+        'testimonials';
+        margin-top:0;
 }
 
-.item {
-    margin:0;
-}
 .left {
     grid-area: left;
     background-color: #263238;
     color: #DCDCDC;
-    /* position: -webkit-sticky; */
-    /* position: sticky; */
+    top: 0;
+    padding: 0.6em 0;
+}
+
+.item {
+    font-size: 1em;
+    margin: auto;
+}
+
+.top {
+    display: none;
+}
+
+.mobileContent {
+    display: inline;
+    text-align: center;
+}
+
+.mobileContent h1 {
+    font-size: 1.8em;
+    color: #DCDCDC;
+}
+
+.mobileContent h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    text-transform: uppercase;
 }
 
 .details_left {
-    padding: 2.5em;
+    padding: 0.9em 2.5em;
 }
 
+.details_left_hobbies {
+    padding: 0.9em 2.5em;
+    margin: auto;
+    text-align: center;
+}
+
+
 .left p {
-    font-size: 0.9em;
+    font-size: 0.8em;
+}
+
+.left .fas {
+    color: #DCDCDC;
+    margin-right: 1em;
 }
 
 .h2_left {
-background-color: #DCDCDC;
-color: #263238;
-padding: 0.2em;
-font-size: 2em;
-text-align: center;
+    background-color: #DCDCDC;
+    color: #263238;
+    padding: 0.18em;
+    font-size: 1.5em;
+    text-align: center;
+    /* margin-top: 0; */
 }
 
 #donut {
     border: 4px #DCDCDC solid;
     border-radius: 50% 50% 50% 50%;
-    margin: 4.5em auto;
-    height: 10em;
-    width: 10em;
+    margin: 2em auto;
+    height: 7.5em;
+    width: 7.5em;
     overflow: hidden;
 }
+
 img {
     height: 100%;
     width: 100%;
 }
 
-.top {
-    grid-area: top;
-    padding: 2.5em;
-}
-
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    font-size: 3em;
+    font-size: 2.5em;
     color: #B22222;
     text-transform: uppercase;
     margin-bottom: 0;
 }
 
-#title {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 400;
-    font-size: 1.25em;
-    text-transform: uppercase;
+a {
+    color: #DCDCDC;
+    text-decoration: none;
 }
 
+a:hover {
+    color:#B22222;
+  }
+
 hr {
-    color: #B22222;
+    border-color: #B22222;
     border-top: 4px;
     margin-bottom: 1.5em;
 }
@@ -89,7 +116,7 @@ hr {
 h2 {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
-    font-size: 2em;
+    font-size: 1.5em;
     text-transform: uppercase;
     margin-bottom: 0.5em;
 }
@@ -102,9 +129,10 @@ p {
 }
 
 .fas {
-color:#B22222;
-margin-right: 1em;
+    color: #B22222;
+    margin-right: 1em;
 }
+
 /* work experience section */
 .exp {
     grid-area: exp;
@@ -112,16 +140,13 @@ margin-right: 1em;
 }
 
 .job {
-    display: grid;
-    grid-template-columns: 2fr 6fr;
-    gap: 10px;
-    grid-template-areas: 
-        'date_loc jd';
-    align-items: start;    
-    margin-bottom: 2.5em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'date_loc'
+        'jd'
 }
 
-.job >p {
+.job>p {
     font-family: "Roboto", sans-serif;
     font-size: 0.9em;
     font-weight: 300;
@@ -137,19 +162,19 @@ margin-right: 1em;
     font-weight: 400;
     color: #263238;
     margin-top: 0;
-}    
+}
 
 .jd {
     grid-area: jd;
     display: flex;
     flex-flow: column;
     align-self: start;
-    
+
 }
 
 .job_title {
     font: 'Roboto', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 300;
     color: #B22222;
     margin-top: 0;
@@ -176,16 +201,14 @@ li {
 }
 
 .course {
-    display: grid;
-    grid-template-columns: 2fr 6fr;
-    gap: 10px;
-    grid-template-areas: 
-        'date_loc course_d';
-    align-items: start;    
-    margin-bottom: 2.5em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'date_loc'
+        'course_d'
 }
 
-.course >p {
+
+.course>p {
     font-family: "Roboto", sans-serif;
     font-size: 0.9em;
     font-weight: 300;
@@ -225,10 +248,11 @@ li {
     padding-bottom: 0;
     /* introducing a grid here */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1rem;
-    margin-bottom:0;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 1em;
+    margin-bottom: 0;
 }
+
 .testimony {
     display: flex;
     flex-flow: column;
@@ -236,26 +260,25 @@ li {
     color: #263238;
     border-radius: 0.2em;
     padding: 2em;
+    margin-bottom: 0;
 }
 
-.testimony >p {
+.testimony>p {
     font-family: "Mate", serif;
     font-style: italic;
     font-size: 1.2em;
-    z-index: 5;
 }
 
 .fa-quote-right {
     font-size: 3em;
-    opacity:20%;
-    /* z-index:-1; */
+    opacity: 20%;
 }
 
 
 .signature {
-margin-top: auto;
-align-items: end;
-text-align: center;
+    margin-top: auto;
+    align-items: end;
+    text-align: center;
 }
 
 .small_donut {
@@ -268,7 +291,7 @@ text-align: center;
 }
 
 .name_job {
-    margin:auto;
+    margin: auto;
 }
 
 .name {
@@ -283,59 +306,86 @@ text-align: center;
     font-weight: 400;
 }
 
+@media screen and (min-width: 800px) {
 
-@media screen and (max-width: 980px) {
+
     .container {
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: 
-        'left top'
-        'left exp'
-        'left education'
-        'left testimonials ';
+        display: grid;
+        grid-template-columns: minmax(350px, 1fr) 3fr;
+        grid-template-areas:
+            'left top'
+            'left exp'
+            'left education'
+            'left testimonials';
+            padding-bottom: 0;
+            box-sizing: border-box;
+    }
+
+    .item {
+        margin: 0;
+    }
+
+    .mobileContent {
+        display: none;
+    }
+
+    .invis {
+        color: #DCDCDC;
+    }
+
+    .left {
+        grid-area: left;
+        background-color: #263238;
+        color: #DCDCDC;
+        top: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        height: 100vh;
+        width: auto;
+    }
+
+    .top {
+        grid-area: top;
+        padding: 1.5em 2.5em;
+        display: inline;
+    }
+
+    #title {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        margin-bottom: 0;
     }
 
     .job {
-        grid-template-columns:1fr;
+        display: grid;
+        grid-template-columns: 2fr 6fr;
+        gap: 10px;
         grid-template-areas:
-        'date_loc'
-        'jd'
+            'date_loc jd';
+        align-items: start;
+        margin-bottom: 2.5em;
     }
 
     .course {
-        grid-template-columns:1fr;
+        display: grid;
+        grid-template-columns: 2fr 6fr;
+        gap: 10px;
         grid-template-areas:
-        'date_loc'
-        'course_d'  
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .item {
-      font-size: 1em;
-      margin: auto;
-    }
-    .top {
-        display: none;
-    }
-    .mobileContent {
-        display: inline;
-        text-align: center;
+            'date_loc course_d';
+        align-items: start;
+        margin-bottom: 2.5em;
     }
 
-    .mobileContent h1 {
-        font-size: 2.1em;
+    .testimonials {
+        /* grid-area: testimonials; */
+        /* padding: 2.5em; */
+        /* padding-bottom: 0; */
+        /* introducing a grid here */
+        /* display: grid; */
+        /* grid-template-columns: repeat(auto-fit, minmax(370px, 1fr)); */
+        /* gap: 1em; */
+        /* margin-bottom: 0; */
     }
-
-    .mobileContent h2 {
-        font-size: 1.1em;
-    }
-
-    .container {
-      grid-template-columns: 1fr;
-      grid-template-areas: 
-        'left'
-        'exp'
-        'education'
-        'testimonials';
-    }
-  }
+}
