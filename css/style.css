@@ -13,11 +13,11 @@ body {
 }
 
 .left {
-    grid-area: left;
     background-color: #263238;
     color: #DCDCDC;
-    top: 0;
+    grid-area: left;
     padding: 0.6em 0;
+    top: 0;
 }
 
 .item {
@@ -36,26 +36,26 @@ body {
 }
 
 .mobileContent h1 {
-    font-size: 1.8em;
     color: #DCDCDC;
+    font-size: 1.8em;
 }
 
 .mobileContent h2 {
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 400;
     font-size: 0.9em;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
 .gotopbtn {
-    position: fixed;
     bottom: 0.5em;
-    right: 0;
-    text-decoration: none;
-    text-align: center;
-    line-height: 2em;
     color: #B22222;
     font-size: 1.3em;
+    line-height: 2em;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
 }
 
 .details_left {
@@ -63,8 +63,8 @@ body {
 }
 
 .details_left_hobbies {
-    padding: 0.9em 2.5em;
     margin: auto;
+    padding: 0.9em 2.5em;
     text-align: center;
 }
 
@@ -86,18 +86,18 @@ body {
 .h2_left {
     background-color: #DCDCDC;
     color: #263238;
-    padding: 0.18em;
     font-size: 1.5em;
+    padding: 0.18em;
     text-align: center;
 }
 
 #donut {
     border: 4px #DCDCDC solid;
     border-radius: 50% 50% 50% 50%;
-    margin: 2em auto;
     height: 7.5em;
-    width: 7.5em;
+    margin: 2em auto;
     overflow: hidden;
+    width: 7.5em;
 }
 
 img {
@@ -106,12 +106,12 @@ img {
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 2.5em;
     color: #B22222;
-    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    font-weight: 100;
     margin-bottom: 0;
+    text-transform: uppercase;
 }
 
 a {
@@ -131,16 +131,16 @@ hr {
 
 h2 {
     font-family: "Roboto", sans-serif;
-    font-weight: 100;
     font-size: 1.5em;
-    text-transform: uppercase;
+    font-weight: 100;
     margin-bottom: 0.5em;
-}
+    text-transform: uppercase;
+   }
 
 p {
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
     font-size: 0.9em;
+    font-weight: 300;
     margin-top: 1em;
 }
 
@@ -173,39 +173,38 @@ p {
 }
 
 .period {
+    color: #263238;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 0.8em;
     font-weight: 400;
-    color: #263238;
     margin-top: 0;
 }
 
 .jd {
-    grid-area: jd;
+    align-self: start;
     display: flex;
     flex-flow: column;
-    align-self: start;
-
+    grid-area: jd;
 }
 
 .job_title {
-    font: 'Roboto', sans-serif;
+    color: #B22222;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
-    color: #B22222;
     margin-top: 0;
 }
 
 .employer {
+    color: #263238;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 0.8em;
     font-weight: 400;
-    color: #263238;
     margin-top: 0;
 }
 
 li {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 0.9em;
     font-weight: 300;
     margin-left: -25px;
@@ -218,8 +217,8 @@ li:last-child {
 /* Education section */
 .education {
     grid-area: education;
-    padding: 0 2.5em;
     margin: 0;
+    padding: 0 2.5em;
 }
 
 .course {
@@ -231,7 +230,7 @@ li:last-child {
 
 
 .course>p {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 0.9em;
     font-weight: 300;
 }
@@ -241,27 +240,27 @@ li:last-child {
 }
 
 .course_d {
-    grid-area: course_d;
+    align-self: start;
     display: flex;
     flex-flow: column;
-    align-self: start;
-}
+    grid-area: course_d;
+  }
 
 .provider {
+    color: #263238;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 0.8em;
     font-weight: 400;
-    color: #263238;
     margin-top: 0;
 }
 
 .qualification {
-    font: 'Roboto', sans-serif;
+    color: #B22222;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     font-weight: 300;
-    color: #B22222;
-    margin-top: 0;
     margin-bottom: 1em;
+    margin-top: 0;
 }
 
 .course_d p:last-child {
@@ -270,27 +269,26 @@ li:last-child {
 
 /* testimonials section */
 .testimonials {
-    grid-area: testimonials;
-    padding: 2.5em;
     display: flex;
     flex-flow: row wrap;
-    gap: 1em;
+    grid-area: testimonials;
+    /* grid-gap: 1em; */
+    padding: 2.5em;
 }
 
 .testimony {
+    background-color: #DCDCDC;
+    border-radius: 0.2em;
+    color: #263238;
     display: flex;
     flex-flow: column;
-    background-color: #DCDCDC;
-    color: #263238;
-    border-radius: 0.2em;
+    margin-bottom: 1em;
     padding: 2em;
-    margin-bottom: 0;
 }
-
 .testimony>p {
     font-family: "Mate", serif;
-    font-style: italic;
     font-size: 1.2em;
+    font-style: italic;
 }
 
 .fa-quote-right {
@@ -300,18 +298,18 @@ li:last-child {
 
 
 .signature {
+    align-items: flex-end;
     margin-top: auto;
-    align-items: end;
     text-align: center;
 }
 
 .small_donut {
     border: 4px white solid;
     border-radius: 50% 50% 50% 50%;
-    margin: auto;
     height: 5em;
-    width: 5em;
+    margin: auto;
     overflow: hidden;
+    width: 5em;
 }
 
 .name_job {
@@ -413,7 +411,11 @@ li:last-child {
 }
 
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1030px) {
+
+    .gotopbtn {
+        display: none;
+    }
 
 
     .wrapper {
@@ -424,7 +426,7 @@ li:last-child {
 
     .container {
         grid-column-start: 2;
-        grid-template-areas:
+        /* grid-template-areas: */
     }
 
     .item {
@@ -440,37 +442,37 @@ li:last-child {
     }
 
     .left {
-        grid-area: left;
         background-color: #263238;
         color: #DCDCDC;
-        top: 0;
-        position: fixed;
+        grid-area: left;
         height: 100vh;
+        position: fixed;
+        top: 0;
         width: 400px;
     }
 
     .top {
-        grid-area: top;
-        padding:  2.2em 2.5em;
         display: inline-grid;
+        grid-area: top;
         grid-column-start: 2;
+        padding:  2.2em 2.5em;
     }
 
     #title {
         font-family: 'Roboto Condensed', sans-serif;
-        font-weight: 400;
         font-size: 1.1em;
-        text-transform: uppercase;
+        font-weight: 400;
         margin-bottom: 0;
+        text-transform: uppercase;
     }
 
     .job {
-        display: grid;
-        grid-template-columns: 2fr 6fr;
-        gap: 10px;
-        grid-template-areas:
-            'date_loc jd';
         align-items: start;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+        'date_loc jd';
+        grid-template-columns: 2fr 6fr;
         margin-bottom: 2.5em;
     }
 
@@ -479,21 +481,21 @@ li:last-child {
     }
 
     .course {
+        align-items: start;
         display: grid;
-        grid-template-columns: 2fr 6fr;
-        gap: 10px;
+        grid-gap: 10px;
         grid-template-areas:
             'date_loc course_d';
-        align-items: start;
+        grid-template-columns: 2fr 6fr;
         margin-bottom: 2.5em;
     }
 
     .testimonials {
+        display: grid;
         grid-area: testimonials;
         padding: 2.5em;
         /* introducing a grid here */
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-        gap: 1em;
+        grid-gap: 1em;
     }
 }
