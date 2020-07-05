@@ -2,28 +2,31 @@ body {
     margin: 0;
 }
 
-.container {
+/* Set font-family for all elements on website */
+* {
+    font-family: "Roboto", sans-serif;
+}
+main {
     grid-template-columns: 1fr;
     grid-template-areas:
-        'left'
+        'aside'
         'exp'
         'education'
         'testimonials';
-        margin-top:0;
+    margin-top: 0;
 }
 
-.left {
+aside {
     background-color: #263238;
     color: #DCDCDC;
-    grid-area: left;
+    grid-area: aside;
     padding: 0.6em 0;
     top: 0;
 }
 
-.item {
+section {
     font-size: 1em;
     margin: 0 auto;
-    /* margin-bottom: 0; */
 }
 
 .top {
@@ -58,32 +61,34 @@ body {
     text-decoration: none;
 }
 
-.details_left {
+aside>.details {
     padding: 0.9em 2.5em 0.3em 2.5em;
 }
 
-.details_left_hobbies {
+address {
+    padding: 0.9em 2.5em 0.3em 2.5em;
+}
+
+aside>.hobbies {
     margin: auto;
     padding: 0.9em 2.5em;
     text-align: center;
 }
 
-
-.left p {
+aside address p {
     font-size: 0.8em;
+    font-style: normal;
 }
 
-.left .fas {
+/* Combined 'aside .fas' and 'aside .fab' into one class */
+aside .fas,
+aside .fab {
     color: #DCDCDC;
     margin-right: 1em;
 }
 
-.left .fab {
-    color: #DCDCDC;
-    margin-right: 1em;
-}
-
-.h2_left {
+/* Changed from .h2_aside to use a CSS selector */
+aside>h2 {
     background-color: #DCDCDC;
     color: #263238;
     font-size: 1.5em;
@@ -91,7 +96,8 @@ body {
     text-align: center;
 }
 
-#donut {
+/* Changed to class because this could potentially be reused */
+.donut {
     border: 4px #DCDCDC solid;
     border-radius: 50% 50% 50% 50%;
     height: 7.5em;
@@ -107,7 +113,6 @@ img {
 
 h1 {
     color: #B22222;
-    font-family: 'Roboto', sans-serif;
     font-size: 2.5em;
     font-weight: 100;
     margin-bottom: 0;
@@ -120,7 +125,7 @@ a {
 }
 
 a:hover {
-    color:#B22222;
+    color: #B22222;
 }
 
 hr {
@@ -130,15 +135,14 @@ hr {
 }
 
 h2 {
-    font-family: "Roboto", sans-serif;
     font-size: 1.5em;
     font-weight: 100;
     margin-bottom: 0.5em;
     text-transform: uppercase;
-   }
+}
 
 p {
-    font-family: "Roboto", sans-serif;
+
     font-size: 0.9em;
     font-weight: 300;
     margin-top: 1em;
@@ -153,6 +157,7 @@ p {
 .exp {
     grid-area: exp;
     padding: 0 2.5em;
+    margin-top: 4em;
 }
 
 .job {
@@ -163,7 +168,6 @@ p {
 }
 
 .job>p {
-    font-family: "Roboto", sans-serif;
     font-size: 0.9em;
     font-weight: 300;
 }
@@ -189,7 +193,6 @@ p {
 
 .job_title {
     color: #B22222;
-    font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     margin-top: 0;
@@ -204,15 +207,14 @@ p {
 }
 
 li {
-    font-family: 'Roboto', sans-serif;
     font-size: 0.9em;
     font-weight: 300;
     margin-left: -25px;
 }
 
 li:last-child {
-   margin-bottom: 1em;
-  }
+    margin-bottom: 1em;
+}
 
 /* Education section */
 .education {
@@ -230,7 +232,6 @@ li:last-child {
 
 
 .course>p {
-    font-family: 'Roboto', sans-serif;
     font-size: 0.9em;
     font-weight: 300;
 }
@@ -244,7 +245,7 @@ li:last-child {
     display: flex;
     flex-flow: column;
     grid-area: course_d;
-  }
+}
 
 .provider {
     color: #263238;
@@ -256,7 +257,6 @@ li:last-child {
 
 .qualification {
     color: #B22222;
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     font-weight: 300;
     margin-bottom: 1em;
@@ -264,7 +264,7 @@ li:last-child {
 }
 
 .course_d p:last-child {
- margin-bottom: 3em;
+    margin-bottom: 3em;
 }
 
 /* testimonials section */
@@ -285,6 +285,7 @@ li:last-child {
     margin-bottom: 1em;
     padding: 2em;
 }
+
 .testimony>p {
     font-family: "Mate", serif;
     font-size: 1.2em;
@@ -317,7 +318,6 @@ li:last-child {
 }
 
 .name {
-    font-family: 'Roboto', sans-serif;
     font-size: 1em;
     font-weight: 300;
 }
@@ -333,9 +333,10 @@ li:last-child {
     h2 {
         font-size: 0.9em;
         font-weight: 400;
-    }   
+    }
 
-    .h2_left {
+    /* Changed from .h2_aside to use a CSS selector */
+    aside>h2 {
         font-size: 0.9em;
         font-weight: 400;
     }
@@ -343,11 +344,11 @@ li:last-child {
     .testimony>p {
         font-size: 1em;
     }
-   
+
     .name {
         font-size: 0.8em;
     }
-    
+
     .ref_job {
         font-size: 0.7em;
     }
@@ -356,7 +357,7 @@ li:last-child {
         font-size: 0.9em;
     }
 
-    #donut {
+    .donut {
         height: 6em;
         width: 6em;
     }
@@ -365,19 +366,16 @@ li:last-child {
         margin-right: 0.5em;
     }
 
-    li {
-        font-size: 0.85em;
-    }
-    
-    .job>p {
-        font-size: 0.85em;
-    }
-
+    /* Combined 'li', '.job > p' and '.course > p' into one class */
+    li,
+    .job>p,
     .course>p {
         font-size: 0.85em;
     }
 
-    .ref_job {
+    /* Combined '.ref_job' and 'aside p' into one class */
+    .ref_job,
+    aside p {
         font-size: 0.7em;
     }
 
@@ -385,23 +383,17 @@ li:last-child {
         font-size: 2em;
     }
 
-    .left p {
-        font-size: 0.7em;
-    }
-    
-    .left .fas {
+    /* Combined 'aside .fas' and 'aside .fab' into one class */
+    aside .fas,
+    aside .fab {
         margin-right: 0.5em;
     }
-    
-    .left .fab {
-        margin-right: 0.5em;
-    }
-    
-    .details_left i {
+
+    .details_aside i {
         display: none;
     }
 
-    .details_left_hobbies>i {
+    .details_aside_hobbies>i {
         font-size: 1.2em;
     }
 
@@ -410,26 +402,25 @@ li:last-child {
     }
 }
 
-
-@media screen and (min-width: 1030px) {
+/* If the height is less than 730px show mobile view */
+@media screen and (min-width: 1030px) and (min-height: 730px) {
 
     .gotopbtn {
         display: none;
     }
 
-
-    .wrapper {
+    /* Replaced .wrapper with body element */
+    body {
         display: grid;
         grid-template-columns: 400px auto;
     }
 
-
-    .container {
+    main {
         grid-column-start: 2;
         /* grid-template-areas: */
     }
 
-    .item {
+    .no-margin {
         margin: 0;
     }
 
@@ -437,14 +428,10 @@ li:last-child {
         display: none;
     }
 
-    .invis {
-        color: #DCDCDC;
-    }
-
-    .left {
+    aside {
         background-color: #263238;
         color: #DCDCDC;
-        grid-area: left;
+        grid-area: aside;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -455,7 +442,11 @@ li:last-child {
         display: inline-grid;
         grid-area: top;
         grid-column-start: 2;
-        padding:  2.2em 2.5em;
+        padding: 2.2em 2.5em;
+    }
+
+    .exp {
+        margin-top: 0;
     }
 
     #title {
@@ -471,7 +462,7 @@ li:last-child {
         display: grid;
         grid-gap: 10px;
         grid-template-areas:
-        'date_loc jd';
+            'date_loc jd';
         grid-template-columns: 2fr 6fr;
         margin-bottom: 2.5em;
     }
@@ -499,3 +490,10 @@ li:last-child {
         grid-gap: 1em;
     }
 }
+
+/* Allow aside to scroll if screen height less than 740px */
+/* @media screen and (max-height: 740px) {
+    aside {
+        position: sticky;
+    }
+} */
