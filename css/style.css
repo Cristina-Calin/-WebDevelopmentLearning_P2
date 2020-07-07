@@ -62,7 +62,8 @@ section {
 }
 
 aside>.details {
-    padding: 0.9em 2.5em 0.3em 2.5em;
+    padding: 0.7em 2.5em 0.3em 2.5em;
+    font-size: 0.95em;
 }
 
 address {
@@ -70,6 +71,7 @@ address {
 }
 
 aside>.hobbies {
+    font-size: 14px;
     margin: auto;
     padding: 0.9em 2.5em;
     text-align: center;
@@ -80,14 +82,12 @@ aside address p {
     font-style: normal;
 }
 
-/* Combined 'aside .fas' and 'aside .fab' into one class */
 aside .fas,
 aside .fab {
     color: #DCDCDC;
-    margin-right: 1em;
+    margin: 0 0.5em;
 }
 
-/* Changed from .h2_aside to use a CSS selector */
 aside>h2 {
     background-color: #DCDCDC;
     color: #263238;
@@ -96,14 +96,13 @@ aside>h2 {
     text-align: center;
 }
 
-/* Changed to class because this could potentially be reused */
 .donut {
     border: 4px #DCDCDC solid;
     border-radius: 50% 50% 50% 50%;
-    height: 7.5em;
-    margin: 2em auto;
+    height: 7em;
+    margin: 1.7em auto;
     overflow: hidden;
-    width: 7.5em;
+    width: 7em;
 }
 
 img {
@@ -113,7 +112,7 @@ img {
 
 h1 {
     color: #B22222;
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-weight: 100;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -142,7 +141,6 @@ h2 {
 }
 
 p {
-
     font-size: 0.9em;
     font-weight: 300;
     margin-top: 1em;
@@ -191,7 +189,7 @@ p {
     grid-area: jd;
 }
 
-.job_title {
+.nomen {
     color: #B22222;
     font-size: 1.1em;
     font-weight: 300;
@@ -230,7 +228,6 @@ li:last-child {
         'course_d'
 }
 
-
 .course>p {
     font-size: 0.9em;
     font-weight: 300;
@@ -255,14 +252,6 @@ li:last-child {
     margin-top: 0;
 }
 
-.qualification {
-    color: #B22222;
-    font-size: 1.2em;
-    font-weight: 300;
-    margin-bottom: 1em;
-    margin-top: 0;
-}
-
 .course_d p:last-child {
     margin-bottom: 3em;
 }
@@ -272,7 +261,6 @@ li:last-child {
     display: flex;
     flex-flow: row wrap;
     grid-area: testimonials;
-    /* grid-gap: 1em; */
     padding: 2.5em;
 }
 
@@ -282,7 +270,7 @@ li:last-child {
     color: #263238;
     display: flex;
     flex-flow: column;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     padding: 2em;
 }
 
@@ -297,19 +285,15 @@ li:last-child {
     opacity: 20%;
 }
 
-
 .signature {
     align-items: flex-end;
     margin-top: auto;
     text-align: center;
 }
 
-.small_donut {
+.signature .donut {
     border: 4px white solid;
-    border-radius: 50% 50% 50% 50%;
     height: 5em;
-    margin: auto;
-    overflow: hidden;
     width: 5em;
 }
 
@@ -327,16 +311,11 @@ li:last-child {
     font-size: 0.8em;
     font-weight: 400;
 }
-
+/* very small screens - Nokia 8110 4G */
 @media screen and (max-width:350px) and (min-width:240px) {
 
+    aside>h2,
     h2 {
-        font-size: 0.9em;
-        font-weight: 400;
-    }
-
-    /* Changed from .h2_aside to use a CSS selector */
-    aside>h2 {
         font-size: 0.9em;
         font-weight: 400;
     }
@@ -349,11 +328,7 @@ li:last-child {
         font-size: 0.8em;
     }
 
-    .ref_job {
-        font-size: 0.7em;
-    }
-
-    .job_title {
+    .nomen {
         font-size: 0.9em;
     }
 
@@ -369,13 +344,12 @@ li:last-child {
     /* Combined 'li', '.job > p' and '.course > p' into one class */
     li,
     .job>p,
-    .course>p {
+    .course>p 
+    aside p {
         font-size: 0.85em;
     }
 
-    /* Combined '.ref_job' and 'aside p' into one class */
-    .ref_job,
-    aside p {
+    .ref_job {
         font-size: 0.7em;
     }
 
@@ -383,22 +357,17 @@ li:last-child {
         font-size: 2em;
     }
 
-    /* Combined 'aside .fas' and 'aside .fab' into one class */
-    aside .fas,
-    aside .fab {
-        margin-right: 0.5em;
-    }
-
-    .details_aside i {
+    address .fas, address .fab {
         display: none;
     }
 
-    .details_aside_hobbies>i {
+    aside .hobbies>i {
         font-size: 1.2em;
+        margin: 0 0.5em;
     }
 
     .mobileContent h1 {
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 }
 
@@ -409,7 +378,6 @@ li:last-child {
         display: none;
     }
 
-    /* Replaced .wrapper with body element */
     body {
         display: grid;
         grid-template-columns: 400px auto;
@@ -417,11 +385,6 @@ li:last-child {
 
     main {
         grid-column-start: 2;
-        /* grid-template-areas: */
-    }
-
-    .no-margin {
-        margin: 0;
     }
 
     .mobileContent {
@@ -432,7 +395,8 @@ li:last-child {
         background-color: #263238;
         color: #DCDCDC;
         grid-area: aside;
-        height: 100vh;
+        height: 100%;
+        min-height: 95vh;
         position: fixed;
         top: 0;
         width: 400px;
@@ -442,7 +406,7 @@ li:last-child {
         display: inline-grid;
         grid-area: top;
         grid-column-start: 2;
-        padding: 2.2em 2.5em;
+        padding: 2em 2.5em;
     }
 
     .exp {
@@ -455,7 +419,7 @@ li:last-child {
         font-weight: 400;
         margin-bottom: 0;
         text-transform: uppercase;
-    }
+    } 
 
     .job {
         align-items: start;
@@ -490,10 +454,3 @@ li:last-child {
         grid-gap: 1em;
     }
 }
-
-/* Allow aside to scroll if screen height less than 740px */
-/* @media screen and (max-height: 740px) {
-    aside {
-        position: sticky;
-    }
-} */
